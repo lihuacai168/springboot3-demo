@@ -1,0 +1,24 @@
+GET http://localhost:8080/getDemo
+
+### post
+POST http://localhost:8080/createUser
+Content-Type: application/json
+
+{
+  "username": "huacai",
+  "password": "hello123",
+  "email": "123334@gmail.com"
+}
+
+### proxy post
+POST http://localhost:8080/proxy/post
+Content-Type: application/json
+
+{
+  "url": "http://localhost:8080/createUser",
+  "body": {
+    "username": "huacai",
+    "password": "hello123",
+    "email": "123336@gmail.com"
+  }
+}
